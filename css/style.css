@@ -1,318 +1,341 @@
 /* https://github.com/bachors/HTML-Desktop-Template */
 
+@import url("win10-icons.css");
 html,
-		body,
-		#screen,
-		#desktop,
-		#taskbar,
-		.window {
-			padding: 0px;
-			margin: 0px;
-			overflow: hidden
-		}
-		
-		body {
-			font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-			color: #333
-		}
-		
-		a,
-		a:hover,
-		a:focus {
-			text-decoration: none;
-			outline: 0;
-		}
+body,
+#screen,
+#desktop,
+#taskbar,
+.window {
+    padding: 0px;
+    margin: 0px;
+}
 
-		#screen { 
-			background: #FF3B68;
-			background: -moz-linear-gradient(122deg, #FF3B68 30%, #A41CFF 81%);
-			background: -webkit-linear-gradient(122deg, #FF3B68 30%, #A41CFF 81%);
-			background: -o-linear-gradient(122deg, #FF3B68 30%, #A41CFF 81%);
-			background: -ms-linear-gradient(122deg, #FF3B68 30%, #A41CFF 81%);
-			background: linear-gradient(122deg, #FF3B68 30%, #A41CFF 81%);
-			position: absolute;
-			top: 0px;
-			width: 100%;
-			height: 100%;
-		}
+body {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    color: #333
+}
 
-		#desktop {
-			width: 100%;
-			display: block;
-			box-sizing: border-box;
-			height: calc(100% - 50px);
-			position: absolute; 
-		}
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: 0;
+}
 
-		#taskbar {
-			background: rgba(0,0,0,.5);
-			color: #fff;
-			height: 50px;
-			position: absolute;
-			bottom: 0px;
-			width: 100%;
-			display: block;
-			box-sizing: border-box;
-			overflow-x: auto
-		}
+#screen {
+    background: steelblue;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
 
-		#desktop a.shorcut {
-			margin: 10px;
-			margin-bottom: 20px;
-			width: 80px;
-			height: auto;
-			max-height: 80px;
-			float: left;
-			text-align: center;
-			font-size: 2em;
-			cursor: pointer
-		}
+#desktop {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    height: calc(100% - 50px);
+    position: absolute;
+}
 
-		#desktop a.shorcut i {
-			margin: 10px;
-			margin-bottom: 0px
-		}
+div #taskbar {
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    overflow-x: auto
+}
 
-		#desktop a.shorcut p {
-			font-size: 12px;
-			margin: 0px;
-			padding: 5px 0px 10px 0px;
-			color: #fff
-		}
+#desktop a.shorcut {
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 80px;
+    height: auto;
+    max-height: 80px;
+    float: left;
+    text-align: center;
+    font-size: 2em;
+    cursor: pointer
+}
 
-		#desktop a.shorcut:hover,
-		#desktop a.shorcut:focus {
-			background: rgba(255,255,255,.2);
-		}
+#desktop a.shorcut i {
+    margin: 10px;
+    margin-bottom: 0px
+}
 
-		#taskbar a {
-			width: 50px;
-			height: 48px;
-			display: inline-block;
-			text-align: center;
-			font-size: 1.8em;
-			cursor: pointer;
-			color: #fff
-		}
+#desktop a.shorcut p {
+    font-size: 12px;
+    margin: 0px;
+    padding: 5px 0px 10px 0px;
+    color: #fff
+}
 
-		#taskbar a.showing {
-			border-bottom: 2px solid #FFE666;
-			margin-left: 2px;
-			margin-right: 2px;
-		}
+#desktop a.shorcut:hover,
+#desktop a.shorcut:focus {
+    background: rgba(255, 255, 255, .2);
+}
 
-		#taskbar a i {
-			margin: 10px auto
-		}
+#taskbar a {
+    width: 48px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.0em;
+    cursor: pointer;
+    color: #fff
+}
 
-		#taskbar a:hover,
-		#taskbar a:focus {
-			background: rgba(0,0,0,.1);
-		}
+#taskbar a.showing {
+    border-bottom: 2px solid #FFE666;
+    margin-left: 2px;
+    margin-right: 2px;
+}
 
-		#taskbar a.showing:hover,
-		#taskbar a.showing:focus,
-		#taskbar a.showing.active {
-			background: rgba(255,255,255,.1);
-		}		
+#taskbar a i {
+    margin: 10px auto
+}
 
-		#taskbar span#date {
-			float: right;
-			font-size: 14px;
-			padding: 6px;
-			padding-right: 10px
-		}
-		
-		.window {
-			background: #fff;
-			width: 900px; 
-			height: 500px;
-			position: absolute;
-			top: 50px;
-			left: 100px;
-			box-shadow: 0 4px 4px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-		}
-		
-		.window.calculator {
-			width: 300px; 
-			height: 497px
-		}
-		
-		.window.games {
-			width: 400px; 
-			height: 520px
-		}
-		
-		.window.active {
-			z-index: 999;
-		}
-		
-		.window .toolbar {
-			display: block;
-			width: 100%; 
-			height: 30px;
-			box-sizing: border-box;
-			overflow: hidden
-		}
-		
-		.window .toolbar .row {
-			display: inline-block;
-			vertical-align:top;
-			width: 50%
-		}
-		
-		.window .toolbar .row:first-of-type {
-			width: calc(50% - 10px);
-			padding: 5px;
-			overflow: hidden;
-			white-space: nowrap;
-			text-overflow: ellipsis;
-		}
-		
-		.window .toolbar span {
-			font-size: 12px;
-		}
-		
-		.panel {
-			float: right;
-			cursor: pointer;
-			padding: 5px;
-			text-align: center;
-			width: 30px;
-			color: rgba(0,0,0,.2);
-		}
-		
-		.panel:hover,
-		.panel:focus {
-			background: rgba(0,0,0,.1);
-			color: #333
-		}
-		
-		.window .toolbar.black,
-		.window .toolbar.black {
-			background: #333;
-			color: #fff
-		}
-		
-		.window .toolbar.black {
-			color: #ccc
-		}
-		
-		.window .toolbar.black .panel {
-			color: #555
-		}
-		
-		.window .toolbar.black .panel:hover,
-		.window .toolbar.black .panel:focus {
-			background: #111;
-		}
-		
-		.window .toolbar .panel.close:hover,
-		.window .toolbar .panel.close:focus {
-			background: #f44336;
-			color: #fff
-		}
-		
-		.ui-resizable-se {
-			background-image: url("");
-		}
-		
-		#addressbar {
-			border-top: 1px solid #ccc;
-			border-bottom: 1px solid #ccc;
-		}
-		
-		#addressbar .input {
-			display: inline-block;
-			vertical-align:top;
-			width: 30%;
-			background: #eee;
-			padding: 5px
-		}
-		
-		#addressbar .input:first-of-type {
-			width: calc(70% - 20px)
-		}
-		
-		#addressbar .input input {
-			width: 100%;
-			border: 1px solid #ccc;
-			padding: 5px;
-			box-sizing: border-box
-		}
-		
-		#site {
-			border: 0px;
-			width: 100%;
-			height: calc(100% - 55px);
-			background: #eee;
-		}
-		
-		iframe {
-			border: 0px;
-			width: 100%;
-			height: 100%;
-		}
-		
-		#site iframe {
-			background: #eee;
-		}
-		
-		.board {
-			display: block;
-			width: 100%;
-			box-sizing: border-box;
-			height: 100%
-		}
-		
-		#ycp,
-		#scp {
-			display: block;
-			width: 100%;
-			box-sizing: border-box;
-			height: calc(100% - 30px);
-		}
-		
-		#yourcode {
-			display: block;
-			width: 100%;
-			box-sizing: border-box;
-			height: calc(100% - 30px);
-			background: #000;
-			color: #fff;
-			border: 0px;
-			padding: 10px;
-			resize: none;
-		}
-		
-		.calculator table {
-			background: #eee
-		}
-		
-		.calculator input[type="text"] {
-			background: #f5f5f5;
-			width: 100%;
-			display: block;
-			box-sizing: border-box;
-			font-size: 3em;
-			text-align: right;
-			padding: 10px;
-			border: none;
-			border-bottom: 1px solid #ccc
-		}
-		
-		.calculator input[type="button"] {
-			background: #eee;
-			width: 100%;
-			display: block;
-			box-sizing: border-box;
-			padding: 15px 10px 15px 10px;
-			border: none;
-			cursor: pointer;
-			font-size: 1em
-		}
-		
-		.calculator input[type="button"]:hover,
-		.calculator input[type="button"]:focus {
-			background: #ddd
-		}
+#taskbar a:hover,
+#taskbar a:focus {
+    background: rgba(0, 0, 0, .1);
+}
+
+#taskbar a.showing:hover,
+#taskbar a.showing:focus,
+#taskbar a.showing.active {
+    background: rgba(255, 255, 255, .1);
+}
+
+#taskbar span#date {
+    float: right;
+    font-size: 14px;
+    padding: 6px;
+    padding-right: 10px
+}
+
+.window {
+    background: #fff;
+    width: 900px;
+    height: 500px;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    /* box-shadow: 0 4px 4px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12); */
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+    border: #0078D7;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.window.calculator {
+    width: 300px;
+    height: 497px
+}
+
+.window.games {
+    width: 400px;
+    height: 520px
+}
+
+.window.active {
+    z-index: 999;
+}
+
+.window .toolbar {
+    display: block;
+    width: 100%;
+    height: 29px;
+    box-sizing: border-box;
+    overflow: hidden
+}
+
+.window .toolbar .row {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%
+}
+
+.window .toolbar .row:first-of-type {
+    width: calc(50% - 10px);
+    padding: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.window .toolbar span {
+    font-size: 12px;
+}
+
+.panel {
+    float: right;
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+    min-width: 45px;
+    height: 29px;
+    color: rgba(0, 0, 0, .2);
+    line-height: 25px;
+}
+
+.panel:hover,
+.panel:focus {
+    background: rgba(0, 0, 0, .1);
+    color: #333
+}
+
+.panel .icon {
+    font-family: "win10-icons";
+    font-style: normal;
+    font-size: 10px;
+    width: 10px;
+    height: 10px;
+}
+
+.icon.close:before {
+    content: '\e804'
+}
+
+.icon.maximize:before {
+    content: '\e805'
+}
+
+.icon.minimize:before {
+    content: '\e806'
+}
+
+.window .toolbar.black,
+.window .toolbar.black {
+    background: #333;
+    color: #fff
+}
+
+.window .toolbar.black {
+    color: #ccc
+}
+
+.window .toolbar.black .panel {
+    color: #555
+}
+
+.window .toolbar.black .panel:hover,
+.window .toolbar.black .panel:focus {
+    background: #111;
+}
+
+.window .toolbar .panel.close:hover,
+.window .toolbar .panel.close:focus {
+    background: #f44336;
+    color: #fff
+}
+
+.ui-resizable-se {
+    background-image: url("");
+}
+
+#addressbar {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+#addressbar .input {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    background: #eee;
+    padding: 5px
+}
+
+#addressbar .input:first-of-type {
+    width: calc(70% - 20px)
+}
+
+#addressbar .input input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-sizing: border-box
+}
+
+#site {
+    border: 0px;
+    width: 100%;
+    height: calc(100% - 40px);
+    background: #eee;
+}
+
+.board iframe {
+    border: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#site iframe {
+    background: #eee;
+}
+
+.board {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: calc(100% - 29px);
+}
+
+#ycp,
+#scp {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: calc(100% - 30px);
+}
+
+.board #yourcode {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    border: 0px;
+    padding: 10px;
+    resize: none;
+}
+
+.calculator table {
+    background: #eee
+}
+
+.calculator input[type="text"] {
+    background: #f5f5f5;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    font-size: 3em;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc
+}
+
+.calculator input[type="button"] {
+    background: #eee;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 15px 10px 15px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em
+}
+
+.calculator input[type="button"]:hover,
+.calculator input[type="button"]:focus {
+    background: #ddd
+}

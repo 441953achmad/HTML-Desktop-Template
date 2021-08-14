@@ -1,0 +1,4 @@
+
+.icon-win10-close:before { content: '\e804'; } /* '' */
+.icon-win10-maximize:before { content: '\e805'; } /* '' */
+.icon-win10-minimize:before { content: '\e806'; } /* '' */

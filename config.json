@@ -1,0 +1,52 @@
+{
+  "name": "win10-icons",
+  "css_prefix_text": "icon-win10-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "8010f72bfca4bb2428e51df588b92d28",
+      "css": "close",
+      "code": 59396,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M1020 70L950 0 510 440 70 0 0 70 440 510 0 950 70 1020 510 580 950 1020 1020 950 580 510Z",
+        "width": 1000
+      },
+      "search": [
+        "close"
+      ]
+    },
+    {
+      "uid": "58ede3cf3c77f4f69105474712888fb0",
+      "css": "maximize",
+      "code": 59397,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M0 0V1000H1000V0H0ZM900 900H100V100H900V900Z",
+        "width": 1000
+      },
+      "search": [
+        "maximize"
+      ]
+    },
+    {
+      "uid": "7137fdcab8f6f988a94a129da841646e",
+      "css": "minimize",
+      "code": 59398,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M0 0V600H1000V500H0Z",
+        "width": 1000
+      },
+      "search": [
+        "minimize"
+      ]
+    }
+  ]
+}
